@@ -55,7 +55,7 @@
             <div class="row">
                 <div class="col-xl-12">
                     <div class="bradcam_text text-center">
-                        <h3>Robot Raconteur Project</h3>
+                        <h3>Motion Primitive Project</h3>
                     </div>
                 </div>
             </div>
@@ -68,8 +68,8 @@
             <div class="row justify-content-center">
                 <div class="col-lg-10">
                     <p align="center">
-                    <iframe width="777 " height="444"
-                    src="https://www.youtube.com/embed/3jhDXIRUiQY">
+                    <iframe width="777" height="444"
+                    src="https://www.youtube.com/embed/RAtZzYwHivk">
                     </iframe>
                 </div>
             </div>
@@ -78,14 +78,17 @@
                     <div class="col-xl-6 col-md-8 ">
                         <div class="single_details">
                             <h3>Overview</h3>
-                            <p>Robot Raconteur (RR) is a communication library for robotic systems. This project aims to develop Robot Raconteur services for different hardware components and integrate them together as a plug-and-play system.</p>
-                            <p>The project testbed consists of UR5, Sawyer and ABB1200, with a webcam and kinect azure sensor. All three robots work at the same time to fill in a box with items on the conveyor belt. </p>
+                            <p> Industrial robots are increasingly deployed in applications requiring an end effector tool to closely track a specified path, such as in spraying and welding. Performance and productivity present possibly conflicting objectives: tracking accuracy, path speed, and motion uniformity. Industrial robots are programmed through motion primitives consisting of waypoints connected by pre-defined motion segments, with specified parameters such as path speed and blending zone. The actual executed robot motion depends on the robot joint servo controller and joint motion constraints (velocity, acceleration, etc.) which are largely unknown to the users.</p>
+                            <p>Programming a robot to achieve the desired performance today is time-consuming and mostly manual, requiring tuning a large number of coupled parameters in the motion primitives. The performance also depends on the choice of additional parameters: possible redundant degrees of freedom, location of the target curve, and the robot configuration.</p>
+                            <p> This project aims optimize the robot motion primitives for performance. The approach first selects the static parameters, then the motion primitives, and finally iteratively update the waypoints to minimize the tracking error. </p>
                         </div>
                         <div class="single_details">
                             <h3>Project Details</h3>
-                            <p>Robot Raconteur services is exposed over the local network, such that any node could talk to each other with correct RR definitions. Overhead cameras is running object detection and tells everyone where the objects are. A centralized path planner collects all robot joints data to guide the robot motion in real time with collision avoidance</p>
-                            <p>Robot services are configured as modular component in the system, and different robots with a standard RR robot definition could simply roll in, calibrate and perform the same task. </p>
+                            <p>To program an industrial robot to follow a complex path using motion primitives, the most common approach is to use it like a machine tool , focusing only on the TCP motion. There are several advanced offline programming software that convert a dense set of TCP waypoint to the robot program of a given robot vendor.  </p>
+                            <p>The actual robot motion from the execution of the robot program will depend on the motion primitives and their parameters (waypoint locations, commanded path speed along the motion segment, size of the blending zone between motion segments) which are affected by the robot joint servo controller and the robot joint motion constraints (joint velocity and acceleration limits).  Robot controller and robot joint constraints are largely unknown to the user.  Therefore, programming a robot to achieve the desired performance is currently a time-consuming and largely manual exercise in tuning the motion primitive parameters and the result may be far from optimal.  Compounding the challenges are the impact of additional parameters: a redundant roll degree of freedom in the tool frame, relative pose between the target curve and the robot base, and the robot configuration (out of the 8 possible choices in a 6 degrees of freedom (DoF) revolute robot). </p>
+                            <p>This project develops a new approach to optimizing the motion primitives by decomposing the problem into a series of subproblems. We first use a combination of evolution algorithm and local optimization to resolve redundancy. Then we use a greedy algorithm for fitting the curve with the least number of motion primitives. Finally, an iterative gradient descent algorithm updates the waypoints to minimize the worst case tracking error.  To evaluate this approach, the industry co-authors of this work suggested two test curves, curve one contains a range of high curvature moves and curve two is the leading edge of a sample turbine fan blade.  A baseline approach is developed based on the current industry practice.  The evaluation metric is the average path speed subject to the specified trajectory tracking and path speed uniformity constraints.  We implemented the motion primitive optimization approach on an ABB IRB 6640 robot in simulation (using RobotStudio) and physical testbed. In all cases, the performance vastly improves over the baseline, ranging over 200% to 300%. </p>
                         </div>
+
                         <div class="button_link">
                             <a href="#" target="_blank" class="boxed-btn3-line">Project Link</a>
                         </div>
@@ -94,6 +97,8 @@
             </div>
         </div>
     </div>
+
+    
 
     <!-- link that opens popup -->
     <script src=" https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"> </script>
