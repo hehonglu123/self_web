@@ -67,14 +67,13 @@
     <div class="gallery_area">
         <div class="container">
             <div class="section-top-border">
-                <h3 class="mb-30">Compliance Control for Insertion Task</h3>
+                <h3 class="mb-30">Insertion Task</h3>
                 <div class="row">
                     <div class="col-md-3">
                         <img src="gifs/insertion.gif" alt="" class="img-fluid">
                     </div>
                     <div class="col-md-9 mt-sm-20">
-                        <p>Recently, the US Federal government banned online casinos from operating in America by making
-                            it illegal to
+                        <p>Space robots usually require compliance with force feedback. This setup is to mimic a 3-link planar robotic arm performing an insertion task.
                         
                         </p>
                     </div>
@@ -84,17 +83,8 @@
                 <h3 class="mb-30">Predictive Motion Planning</h3>
                 <div class="row">
                     <div class="col-md-9">
-                        <p class="text-right">Over time, even the most sophisticated, memory packed computer can begin
-                            to run slow if we
-                            don’t do something to prevent it. The reason why has less to do with how computers are made
-                            and how they age and
-                            more to do with the way we use them. You see, all of the daily tasks that we do on our PC
-                            from running programs
-                            to downloading and deleting software can make our computer sluggish. To keep this from
-                            happening, you need to
-                            understand the reasons why your PC is getting slower and do something to keep your PC
-                            running at its best. You
-                            can do this through regular maintenance and PC performance optimization programs</p>
+                        <p class="text-right">Robot motion control in real time is a challenging task, especially with multiple robots sharing the same workspace. I build a simple workspace in Gazebo and use Tesseract to retrieve collision distance (vectors between closest points on both arms). Predictive planning means each robot motion controller looks ahead N-step future and generate N-step command that minimize the end configuration difference with a collision free trajectory. 
+                        </p>
 
                     </div>
                     <div class="col-md-3">
@@ -109,8 +99,7 @@
                         <img src="gifs/eef_calibration.gif" alt="" class="img-fluid">
                     </div>
                     <div class="col-md-9 mt-sm-20">
-                        <p>Recently, the US Federal government banned online casinos from operating in America by making
-                            it illegal to
+                        <p>Robotic vision system requires knowledge of transformation between robot base frame and world frame. This simple tool performs a regression using Aruco tags to calculate robot base frame pose.
                         
                         </p>
                     </div>
@@ -120,17 +109,7 @@
                 <h3 class="mb-30">Compliance Control</h3>
                 <div class="row">
                     <div class="col-md-9">
-                        <p class="text-right">Over time, even the most sophisticated, memory packed computer can begin
-                            to run slow if we
-                            don’t do something to prevent it. The reason why has less to do with how computers are made
-                            and how they age and
-                            more to do with the way we use them. You see, all of the daily tasks that we do on our PC
-                            from running programs
-                            to downloading and deleting software can make our computer sluggish. To keep this from
-                            happening, you need to
-                            understand the reasons why your PC is getting slower and do something to keep your PC
-                            running at its best. You
-                            can do this through regular maintenance and PC performance optimization programs</p>
+                        <p class="text-right">Compliance control with Tormach ZA06, adapt end effector motion to human force input. </p>
 
                     </div>
                     <div class="col-md-3">
@@ -145,8 +124,7 @@
                         <img src="gifs/laser_tracking.gif" alt="" class="img-fluid">
                     </div>
                     <div class="col-md-9 mt-sm-20">
-                        <p>Recently, the US Federal government banned online casinos from operating in America by making
-                            it illegal to
+                        <p>A camera is mounted on the robot end effector, with an active laser dot identification thread running. The robot moves to track the laser dot position to the image center. 
                         
                         </p>
                     </div>
