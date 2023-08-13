@@ -1,0 +1,184 @@
+<!doctype html>
+<html class="no-js" lang="zxx">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Honglu</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- <link rel="manifest" href="site.webmanifest"> -->
+    <link rel="shortcut icon" type="image/x-icon" href="img/logo1.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <!-- CSS here -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/themify-icons.css">
+    <link rel="stylesheet" href="css/nice-select.css">
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/gijgo.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/slicknav.css">
+
+    <link rel="stylesheet" href="css/style.css">
+    <!-- <link rel="stylesheet" href="css/responsive.css"> -->
+
+    <!-- <script
+        src="https://code.jquery.com/jquery-3.3.1.js"
+        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+        crossorigin="anonymous">
+    </script>
+    <script> 
+    $(function(){
+      $("#header").load("header.html"); 
+      // $("#footer").load("footer.html"); 
+    });
+    </script>  -->
+</head>
+
+<body>
+    <!--[if lte IE 9]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+        <![endif]-->
+
+    <!-- header-start -->
+    <!-- <div id="header"></div> -->
+    <div class="header-area ">
+        <div id="sticky-header" class="main-header-area">
+            <div class="container-fluid ">
+                <div class="header_bottom_border">
+                    <div class="row align-items-center">
+                        <div class="col-xl-3 col-lg-2">
+                            <div class="logo">
+                                <a href="index.html">
+                                    <img src="img/logo1.png" width="130" height="50" alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-4">
+                            <div class="main-menu  d-none d-lg-block">
+                                <nav>
+                                    <ul id="navigation">
+                                        <li><a href="index.html">home</a></li>
+                                        <li><a href="works.html">Works</a></li>
+                                        <li><a href=#>Gallery<i class="ti-angle-down"></i></a>
+                                            <ul class="submenu">
+                                                    <!-- <li><a href="Landscape.html">Landscape</a></li> -->
+                                                    <li><a href="Nightsky.html">Nightsky</a></li>
+                                                    <!-- <li><a href="Animal.html">Animal</a></li> -->
+                                                    <li><a href="Pachinko.html">Golden Retriever</a></li>
+                                                    <li><a href="Misc.html">Misc</a></li>
+                                                    <li><a href="Video.html">Video</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="abb.html">ABB Instructional Videos</a></li>
+
+                                        <!-- <li><a href="about.html">about</a></li> -->
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-3 d-none d-lg-block">
+                            <div class="Appointment">
+                                <div class="book_btn d-none d-lg-block">
+                                    <a href="contact.html">Let’s Talk</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="mobile_menu d-block d-lg-none"></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- header-end -->
+    <!-- bradcam_area  -->
+    <div class="bradcam_area bradcam_area2 bradcam_bg_1">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="bradcam_text text-center">
+                        <h3>Robot Dynamics Project</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--/ bradcam_area  -->
+
+    <div class="projects_details_area">
+        <div class="container pos_up">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <p align="center">
+                    <video width="555" height="333" controls>
+                        <source src="videos/489_video.mp4" type="video/mp4">
+                    </video>
+
+
+                </div>
+            </div>
+            <div class="details_info">
+                <div class="row justify-content-center">
+                    <div class="col-xl-6 col-md-8 ">
+
+                        <div class="single_details">
+                            <h3>Project Details</h3>
+                            <p>The x-axis of the N frame is assigned to be always along the movement of the end-effector while the y-axis should be horizontal in the world frame. We are able to change the force gain for x, y, z direction in N frame, so that the end-effector would be flexible in those direction. 
+                            <p>For peg in hole, we first move the end factor directly above the hole and then drop it  with steady  gain in x direction and weaker y and z direction, since in y, z direction we want the end-effector to be flexible.</p> 
+                            <p>The Zig-zag groove is the most challenging task, since the robot will be easily stuck at the turning point. To solve this, multiple points outside the path have been added as reference points. Since the point to point motion is interpolated as a straight line, more points will reduce the likelihood to be stucked. Making the waypoint outside the path is a strategy to push the end-effector closer to the outside boundary of the turn. 
+                            <p>For the egg push, we have strong gain in y, z direction to make sure the end factor wouldn’t slip and a steady x gain, but the time span is long so that it will push hard and slowly so as not to crash the egg.</p>
+                        
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- link that opens popup -->
+    <script src=" https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"> </script>
+    <!-- JS here -->
+    <script src="js/vendor/modernizr-3.5.0.min.js"></script>
+    <script src="js/vendor/jquery-1.12.4.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/isotope.pkgd.min.js"></script>
+    <script src="js/ajax-form.js"></script>
+    <script src="js/waypoints.min.js"></script>
+    <script src="js/jquery.counterup.min.js"></script>
+    <script src="js/imagesloaded.pkgd.min.js"></script>
+    <script src="js/scrollIt.js"></script>
+    <script src="js/jquery.scrollUp.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/nice-select.min.js"></script>
+    <script src="js/jquery.slicknav.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <!-- <script src="js/gijgo.min.js"></script> -->
+    <script src="js/slick.min.js"></script>
+
+
+
+    <!--contact js-->
+    <script src="js/contact.js"></script>
+    <script src="js/jquery.ajaxchimp.min.js"></script>
+    <script src="js/jquery.form.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/mail-script.js"></script>
+
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
